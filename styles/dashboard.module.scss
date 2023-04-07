@@ -1,0 +1,87 @@
+@import 'mixins';
+
+.header {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  column-gap: 2rem;
+  margin-top: 2rem;
+  @include respond(mobile) {
+    grid-template-columns: 1fr;
+  }
+
+  &__search {
+    max-width: 27em;
+    @include respond(mobile) {
+      order: 1;
+    }
+    input {
+      width: 100%;
+      padding-left: 3rem;
+      height: 4.1em;
+    }
+    ::placeholder {
+      font-family: 'Outfit';
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1.6rem;
+      color: #1f3f49;
+
+      opacity: 0.5;
+    }
+    &_bar {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    .icon {
+      position: absolute;
+      right: 6.73%;
+    }
+  }
+  &__user_info {
+    // margin-right: 2rem;
+    @include respond(mobile) {
+      order: 0;
+      justify-content: flex-end;
+    }
+    display: flex;
+    gap: 1.6rem;
+    align-items: center;
+    .user__info_notification {
+      background-color: var(--white);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      position: relative;
+      &_icon {
+        position: absolute;
+        top: 0.2rem;
+        right: 0.3rem;
+        display: block;
+        border-radius: 50%;
+        width: 10px;
+        height: 10px;
+        background: #ff1717;
+        box-shadow: 0px 2px 4px rgba(255, 23, 23, 0.26);
+      }
+      .bell_icon {
+        position: absolute;
+      }
+    }
+  }
+  // .header__menu_btn {
+  //   visibility: hidden;
+  //   @include respond(mobile) {
+  //     visibility: visible;
+  //     margin-right: auto;
+  //     border: none;
+  //     cursor: pointer;
+  //     background: transparent;
+  //   }
+  // }
+}
