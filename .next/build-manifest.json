@@ -25,10 +25,15 @@
       "static/chunks/main.js",
       "static/chunks/pages/_error.js"
     ],
-    "/balance": [
+    "/clients": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
-      "static/chunks/pages/balance.js"
+      "static/chunks/pages/clients.js"
+    ],
+    "/earnings": [
+      "static/chunks/webpack.js",
+      "static/chunks/main.js",
+      "static/chunks/pages/earnings.js"
     ]
   },
   "ampFirstPages": []

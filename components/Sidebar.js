@@ -16,8 +16,9 @@ import navbarIcon from '../assets/navbar-icon.svg';
 import styles from '../styles/sidebar.module.scss';
 
 export default function Sidebar() {
-  const [navbar, setNavbar] = useState(false);
+  const [navbar, setNavbar] = useState(true);
   const router = useRouter();
+
   //to fix class issues = transform multiple arguments to a string
   const cx = (...classNames) => classNames.join(' ');
   return (
@@ -29,7 +30,11 @@ export default function Sidebar() {
         <Image src={navbarIcon} alt="navbar icon" />
       </button>
       <aside className={cx(navbar ? styles.sidebar : styles.sidebar__active)}>
-        <Link href="/" className={styles.logo}>
+        <Link
+          href="/"
+          className={styles.logo}
+          onClick={() => setNavbar(!navbar)}
+        >
           <Image
             src={logo}
             alt="Dashboard Logo"
@@ -52,6 +57,7 @@ export default function Sidebar() {
               router.pathname === '/' ? 'active' : ''
             )}
             href="/"
+            onClick={() => setNavbar(!navbar)}
           >
             <figure>
               <Image src={OverviewIcon} alt="Overview icon" />
@@ -64,6 +70,7 @@ export default function Sidebar() {
               router.pathname === '/clients' ? 'active' : ''
             )}
             href="/clients"
+            onClick={() => setNavbar(!navbar)}
           >
             <figure>
               <Image src={ClientsIcon} alt="Clients icon" />
@@ -76,6 +83,7 @@ export default function Sidebar() {
               router.pathname === '/projects' ? 'active' : ''
             )}
             href="/projects"
+            onClick={() => setNavbar(!navbar)}
           >
             <figure>
               <Image src={ProjectsIcon} alt="Projects icon" />
@@ -88,6 +96,7 @@ export default function Sidebar() {
               router.pathname === '/tasks' ? 'active' : ''
             )}
             href="/tasks"
+            onClick={() => setNavbar(!navbar)}
           >
             <figure>
               <Image src={TasksIcon} alt="Tasks icon" />
@@ -100,6 +109,7 @@ export default function Sidebar() {
               router.pathname === '/balance' ? 'active' : ''
             )}
             href="/balance"
+            onClick={() => setNavbar(!navbar)}
           >
             <figure>
               <Image src={BalanceIcon} alt="Balance icon" />
@@ -112,6 +122,7 @@ export default function Sidebar() {
               router.pathname === '/earnings' ? 'active' : ''
             )}
             href="/earnings"
+            onClick={() => setNavbar(!navbar)}
           >
             <figure>
               <Image src={EarningsIcon} alt="Earnings icon" />
