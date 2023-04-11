@@ -107,6 +107,7 @@ a.active {
     grid-template-columns: auto 1fr;
   }
   @include respond(mobile) {
+    margin: 0;
     grid-template-columns: 1fr;
     grid-template-areas:
       'sidebar'

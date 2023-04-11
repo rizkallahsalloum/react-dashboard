@@ -26,20 +26,19 @@
     z-index: 100;
   }
   &__open {
-    height: 900px;
-    grid-area: sidebar;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    background-color: var(--white);
-    border-radius: 50px 0px 0px 50px;
-    padding: 0 0 0 3.6rem;
-    transition: all 0.5s ease;
     position: absolute;
-    left: 0;
+    left: 0em;
+    padding-top: 8rem;
+    transition: all 1s ease;
     z-index: 100;
-    width: 100%;
+    display: flex;
+    align-items: flex-start !important;
+    justify-content: flex-start;
+    figcaption {
+      display: block;
+    }
   }
+
   .nav__active {
     position: absolute;
     left: 0em;
@@ -75,10 +74,11 @@
     @include respond(tab-port) {
       padding: 2rem 3.3rem;
     }
+    @include respond(mobile) {
+      padding: 0.8rem 3.3rem;
+    }
   }
   &__nav_bottom {
-    // padding-top: 24rem;
-    // padding-left: 3.2rem;
     @extend %display__flex_column;
     a:hover {
       filter: brightness(0) saturate(100%) invert(69%) sepia(4%) saturate(3836%)
@@ -112,6 +112,14 @@
       }
       &__mobile {
         display: flex;
+      }
+    }
+    @include respond(mobile) {
+      &__mobile {
+        display: none;
+      }
+      &__desktop {
+        display: block;
       }
     }
   }
