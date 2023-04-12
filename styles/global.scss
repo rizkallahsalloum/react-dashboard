@@ -2,18 +2,22 @@
 @import 'mixins';
 /* Color styles */
 :root {
-  --text: rgba(31, 63, 73, 1);
-  --text--darker: rgba(35, 40, 45, 1);
-  --primary: rgba(106, 177, 135, 1);
-  --secondary: rgba(211, 45, 65, 1);
-  --darker--green: rgba(31, 63, 73, 1);
-  --gray: rgba(206, 210, 204, 1);
-  --light--green: rgba(179, 193, 0, 1);
-  --white: rgba(255, 255, 255, 1);
-  --black: rgba(0, 0, 0, 1);
-  --light--blue: rgba(76, 181, 245, 1);
-  --light--gray: #f6f9ff;
-  --main--bg: #dfe9fe;
+  --clr-text: rgba(31, 63, 73, 1);
+  --clr-text--darker: rgba(35, 40, 45, 1);
+  --clr-primary: rgba(106, 177, 135, 1);
+  --clr-secondary: rgba(211, 45, 65, 1);
+  --clr-darker--green: rgba(31, 63, 73, 1);
+  --clr-gray: rgba(206, 210, 204, 1);
+  --clr-light--green: rgba(179, 193, 0, 1);
+  --clr-white: rgba(255, 255, 255, 1);
+  --clr-black: rgba(0, 0, 0, 1);
+  --clr-light--blue: rgba(76, 181, 245, 1);
+  --clr-light--gray: #f6f9ff;
+  --clr-main--bg: #dfe9fe;
+  --font-primary: 'Outfit';
+  --font-secondary: 'Oswald';
+  --fs--sidebar: 1.6rem;
+  --spacer: 0.8rem;
 }
 
 *,
@@ -44,8 +48,8 @@ html {
 }
 body {
   font-family: 'Outfit', 'Oswald', sans-serif;
-  background-color: var(--main--bg);
-  color: var(--text);
+  background-color: var(--clr-main--bg);
+  color: var(--clr-text);
   line-height: 1.6;
   font-size: 1.6rem;
 }
@@ -55,30 +59,30 @@ picture {
   display: block;
 }
 ::selection {
-  background-color: var(--primary);
-  color: var(--white);
+  background-color: var(--clr-primary);
+  color: var(--clr-white);
 }
 a {
   text-decoration: underline;
-  color: var(--text);
+  color: var(--clr-text);
 }
 a:hover {
   text-decoration: underline;
-  color: var(--primary);
+  color: var(--clr-primary);
 }
 ul {
   list-style: none;
 }
 input {
-  background: #ffffff;
+  background: var(--clr-white);
   box-shadow: 0px 4px 4px rgba(221, 221, 221, 0.25);
   border-radius: 30px;
   border: none;
 }
 a.active {
   width: 15em;
-  color: var(--text);
-  background: var(--light--gray);
+  color: var(--clr-text);
+  background: var(--clr-light--gray);
   border-radius: 10px;
   @include respond(tab-port) {
     width: auto;
@@ -131,7 +135,14 @@ a.active {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(9, minmax(min-content, 5.5em));
-  // grid-template-columns: repeat(auto-fit, minmax(9rem, 5.5em));
   grid-template-rows: 10vh 7vh 20vw repeat(2, min-content);
   column-gap: 2.4rem;
+  row-gap: 3rem;
+  @include respond(mobile) {
+    row-gap: 12rem;
+  }
+}
+
+.content {
+  grid-column: 1 / -1;
 }

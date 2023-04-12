@@ -29,12 +29,6 @@ export default function DashboardHeader() {
           </label>
         </div>
         <div className={styles.header__user_info}>
-          {/* <button
-            onClick={() => setNavbar(!navbar)}
-            className={styles.header__menu_btn}
-          >
-            <Image src={navbarIcon} alt="navbar icon" />
-          </button> */}
           <Link href="#" className={styles.user__info_notification}>
             <span className={styles.user__info_notification_icon}></span>
             <Image
@@ -49,9 +43,11 @@ export default function DashboardHeader() {
             <Image src={userImage} width={56} height={56} alt="User " />
           </Link>
         </div>
-        <div className="header__welcome_username">Hello John</div>
-        <div className="header__tabs">
-          <button>filter</button>
+        <div className={styles.header__info_welcome}>
+          <div className="header__welcome_username">Hello John</div>
+          <div className="header__tabs">
+            <button>filter</button>
+          </div>
         </div>
       </header>
     </>

@@ -137,8 +137,8 @@ export default function Sidebar() {
             </figure>
           </Link>
         </nav>
+        <hr className={styles.sidebar__separator} />
         <nav className={styles.sidebar__nav_bottom}>
-          <hr />
           <a href="#" className={styles.sidebar__nav_link}>
             <figure>
               <Image

@@ -7,7 +7,7 @@ export default function Layout({ children }) {
       <Sidebar />
       <main className="main grid__container">
         <DashboardHeader />
-        {children}
+        <section className="content"> {children}</section>
       </main>
     </>
   );

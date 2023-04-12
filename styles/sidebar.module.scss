@@ -8,7 +8,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  background-color: var(--white);
+  background-color: var(--clr-white);
   border-radius: 50px 0px 0px 50px;
   padding: 0 0 0 3.6rem;
   @include respond(tab-port) {
@@ -29,6 +29,7 @@
     position: absolute;
     left: 0em;
     padding-top: 8rem;
+    padding-left: 5rem;
     transition: all 1s ease;
     z-index: 100;
     display: flex;
@@ -57,8 +58,8 @@
 
     a:hover {
       width: 15em;
-      color: var(--text);
-      background: var(--light--gray);
+      color: var(--clr-text);
+      background: var(--clr-light--gray);
       border-radius: 10px;
       text-decoration: none;
       transition: ease-in-out 0.2s;
@@ -66,6 +67,9 @@
         width: auto;
         background: transparent;
       }
+    }
+    @include respond(mobile) {
+      padding-top: 5rem;
     }
   }
   .sidebar__nav_link {
@@ -85,15 +89,23 @@
         hue-rotate(94deg) brightness(93%) contrast(79%);
       transition: 0.2s;
     }
+    @include respond(mobile) {
+      padding-top: 3rem;
+    }
   }
-  hr {
+  .sidebar__separator {
     border: none;
     border-top: 2px solid #f6f9ff;
     text-align: center;
     max-width: 15em;
     position: relative;
-    bottom: 2.4rem;
+    bottom: -8rem;
+    @include respond(mobile) {
+      width: 20em;
+      bottom: -2rem;
+    }
   }
+
   figure {
     position: relative;
     width: 100%;
@@ -135,7 +147,7 @@
     justify-content: center;
     visibility: visible;
     right: 3rem;
-    top: 10.5rem;
+    top: 6.5rem;
     border: none;
     cursor: pointer;
     background: var(--text--darker);
