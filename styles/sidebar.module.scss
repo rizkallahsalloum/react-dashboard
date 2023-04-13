@@ -87,7 +87,6 @@
     a:hover {
       filter: brightness(0) saturate(100%) invert(69%) sepia(4%) saturate(3836%)
         hue-rotate(94deg) brightness(93%) contrast(79%);
-      transition: 0.2s;
     }
     @include respond(mobile) {
       padding-top: 3rem;
@@ -150,7 +149,7 @@
     top: 6.5rem;
     border: none;
     cursor: pointer;
-    background: var(--text--darker);
+    background: var(--clr-text--darker);
     border-radius: 50%;
     z-index: 200;
   }

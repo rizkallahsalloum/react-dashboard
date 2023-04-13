@@ -1,4 +1,5 @@
 @import 'mixins';
+@import 'helpers';
 
 .header {
   grid-column: 1 / -1;
@@ -79,5 +80,17 @@
     grid-column: 1 /-1;
     display: flex;
     justify-content: space-between;
+    padding: calc(var(--spacer) * 5) 0;
+    @include respond(mobile) {
+      padding: calc(var(--spacer) * 3) 0;
+    }
+    h1 {
+      font-size: 2.4rem;
+    }
+  }
+  .header__tabs {
+    button {
+      @extend %transparent__button;
+    }
   }
 }

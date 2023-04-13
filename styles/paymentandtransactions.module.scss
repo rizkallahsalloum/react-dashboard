@@ -1,0 +1,17 @@
+@import 'mixins';
+@import 'helpers';
+
+.payment__transactions {
+  grid-column: 5 / 8;
+  background-color: aqua;
+}
+.user__card {
+  @extend %component;
+  width: 200px;
+  height: 135px;
+}
+
+.card__top,
+.card__bottom {
+  @extend %display__flex;
+}

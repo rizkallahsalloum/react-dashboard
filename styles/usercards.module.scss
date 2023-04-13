@@ -1,0 +1,20 @@
+@import 'mixins';
+@import 'helpers';
+
+.user__cards {
+  grid-column: 1 / 5;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  gap: 24px;
+}
+.user__card {
+  @extend %component;
+  width: 200px;
+  height: 135px;
+}
+
+.card__top,
+.card__bottom {
+  @extend %display__flex;
+}

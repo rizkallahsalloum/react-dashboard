@@ -7,10 +7,9 @@ import searchIcon from '../assets/search-icon.svg';
 import notificationIcon from '../assets/notification-icon.svg';
 import userImage from '../assets/user.png';
 import navbarIcon from '../assets/navbar-icon.svg';
+import filterIcon from '../assets/filter-icon.svg';
 
 export default function DashboardHeader() {
-  // const [navbar, setNavbar] = useState(false);
-
   return (
     <>
       <header className={styles.header}>
@@ -44,9 +43,14 @@ export default function DashboardHeader() {
           </Link>
         </div>
         <div className={styles.header__info_welcome}>
-          <div className="header__welcome_username">Hello John</div>
-          <div className="header__tabs">
-            <button>filter</button>
+          <div className={styles.header__welcome_username}>
+            <h1>Hello, John</h1>
+          </div>
+          <div className={styles.header__tabs}>
+            <button>
+              filter
+              <Image src={filterIcon} width={18} height={17} alt="Filter " />
+            </button>
           </div>
         </div>
       </header>

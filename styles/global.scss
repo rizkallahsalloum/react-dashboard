@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;600;700&family=Outfit:wght@400;700&display=swap');
 @import 'mixins';
+@import 'helpers';
 /* Color styles */
 :root {
   --clr-text: rgba(31, 63, 73, 1);
@@ -17,6 +18,8 @@
   --font-primary: 'Outfit';
   --font-secondary: 'Oswald';
   --fs--sidebar: 1.6rem;
+  --fs-component: 1.8rem;
+  --fs-text: 1.4rem;
   --spacer: 0.8rem;
 }
 
@@ -135,14 +138,22 @@ a.active {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(9, minmax(min-content, 5.5em));
-  grid-template-rows: 10vh 7vh 20vw repeat(2, min-content);
+  grid-template-rows: 10vh 7vh repeat(3, min-content);
   column-gap: 2.4rem;
-  row-gap: 3rem;
+  padding-right: 4.4rem;
+  row-gap: calc(var(--spacer) * 10);
   @include respond(mobile) {
-    row-gap: 12rem;
+    row-gap: calc(var(--spacer) * 20);
+    padding-right: 0;
   }
 }
 
 .content {
   grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(12, minmax(min-content, 88px));
+  gap: 24px;
+}
+.display__flex {
+  @extend %display__flex;
 }
