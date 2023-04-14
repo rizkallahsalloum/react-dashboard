@@ -1,0 +1,18 @@
+@import 'mixins';
+@import 'helpers';
+
+.recenttasks {
+  grid-column: 8 / -1;
+  display: grid;
+  background-color: rgb(95, 226, 43);
+}
+.user__card {
+  @extend %component;
+  width: 200px;
+  height: 135px;
+}
+
+.card__top,
+.card__bottom {
+  @extend %display__flex;
+}

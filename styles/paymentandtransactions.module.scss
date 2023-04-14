@@ -4,6 +4,9 @@
 .payment__transactions {
   grid-column: 5 / 8;
   background-color: aqua;
+  @include respond(port-land) {
+    grid-column: 8 / -1;
+  }
 }
 .user__card {
   @extend %component;

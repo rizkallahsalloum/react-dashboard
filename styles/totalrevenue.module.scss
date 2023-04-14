@@ -4,6 +4,10 @@
 .total__revenue {
   grid-column: 8 / -1;
   background-color: red;
+  @include respond(tab-land) {
+    // grid-template-columns: 1fr;
+    // grid-column: 1 / 5;
+  }
 }
 .user__card {
   @extend %component;

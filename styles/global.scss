@@ -131,13 +131,14 @@ a.active {
   background: #f7f9ff;
   border-radius: 0px 50px 50px 0px;
   @include respond(mobile) {
-    border-radius: 50px;
+    border-radius: 5rem;
   }
 }
 .grid__container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(9, minmax(min-content, 5.5em));
+  grid-template-columns: repeat(9, minmax(min-content, 8.8rem));
+
   grid-template-rows: 10vh 7vh repeat(3, min-content);
   column-gap: 2.4rem;
   padding-right: 4.4rem;
@@ -149,10 +150,11 @@ a.active {
 }
 
 .content {
+  max-width: 60em;
   grid-column: 1 / -1;
   display: grid;
-  grid-template-columns: repeat(12, minmax(min-content, 88px));
-  gap: 24px;
+  grid-template-columns: repeat(12, minmax(min-content, 8.8rem));
+  gap: 2.4rem;
 }
 .display__flex {
   @extend %display__flex;
