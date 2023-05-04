@@ -1,0 +1,9 @@
+.overview {
+  grid-column: 1/ -1;
+  display: grid;
+  grid-template-columns: repeat(9, 1fr);
+}
+.user__cards {
+  background-color: darkblue;
+  order: 6;
+}

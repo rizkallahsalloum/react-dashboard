@@ -2,7 +2,11 @@
 @import 'helpers';
 
 .total__revenue {
-  grid-column: 8 / -1;
+  @extend %grid__container;
+  order: 3;
+  @include respond(mobile) {
+    // grid-column: 1/ -1;
+  }
   background-color: red;
   @include respond(tab-land) {
     // grid-template-columns: 1fr;
@@ -11,8 +15,8 @@
 }
 .user__card {
   @extend %component;
-  width: 200px;
-  height: 135px;
+  // width: 200px;
+  // height: 135px;
 }
 
 .card__top,

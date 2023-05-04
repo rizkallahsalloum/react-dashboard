@@ -2,14 +2,18 @@
 @import 'helpers';
 
 .reports {
-  grid-column: 1 / 8;
-  display: grid;
+  @extend %grid__container;
+  order: 4;
+  @include respond(mobile) {
+    // grid-column: 1/ -1;
+  }
+  // display: grid;
   background-color: blueviolet;
 }
 .user__card {
   @extend %component;
-  width: 200px;
-  height: 135px;
+  // width: 200px;
+  // height: 135px;
 }
 
 .card__top,

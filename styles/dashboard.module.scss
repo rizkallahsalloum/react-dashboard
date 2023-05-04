@@ -8,13 +8,14 @@
   column-gap: 2rem;
   margin-top: 2rem;
   @include respond(mobile) {
-    grid-template-columns: 1fr;
+    grid-row-gap: calc(var(--spacer) * 3);
   }
 
   &__search {
     max-width: 27em;
     @include respond(mobile) {
-      order: 1;
+      max-width: 30em;
+      grid-row: 2;
     }
     input {
       width: 100%;
@@ -43,7 +44,6 @@
   }
   &__user_info {
     @include respond(mobile) {
-      order: 0;
       justify-content: flex-end;
       margin-right: 8rem;
     }
@@ -82,7 +82,7 @@
     justify-content: space-between;
     padding: calc(var(--spacer) * 5) 0;
     @include respond(mobile) {
-      padding: calc(var(--spacer) * 3) 0;
+      padding: calc(var(--spacer) * 1) 0;
     }
     h1 {
       font-size: 2.4rem;

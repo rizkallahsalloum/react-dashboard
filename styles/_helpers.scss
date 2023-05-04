@@ -40,6 +40,22 @@
 
 %component {
   background-color: var(--clr-white);
-  padding: calc(var(--spacer) * 4);
+  padding: calc(var(--spacer) * 3);
   border-radius: 2rem;
+}
+
+%grid__container {
+  --width: 9;
+  --gap-constant: 0.3%;
+  --initialbasis: calc(var(--width, 0) / var(--columns, 9) * 100%);
+  --gap: calc(
+    (var(--columns, 9) - var(--width, 0)) * var(--gap-constant, 0.3%)
+  );
+  flex-basis: calc(var(--initialbasis) - var(--gap));
+}
+
+%numbers {
+  font-family: var(--font-secondary);
+  font-size: var(--fs-text);
+  color: var(--clr-text--darker--op);
 }

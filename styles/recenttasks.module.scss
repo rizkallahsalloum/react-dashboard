@@ -2,14 +2,17 @@
 @import 'helpers';
 
 .recenttasks {
-  grid-column: 8 / -1;
-  display: grid;
+  @extend %grid__container;
+  order: 5;
+  @include respond(mobile) {
+    grid-column: 1/ -1;
+  }
   background-color: rgb(95, 226, 43);
 }
 .user__card {
   @extend %component;
-  width: 200px;
-  height: 135px;
+  // width: 200px;
+  // height: 135px;
 }
 
 .card__top,
